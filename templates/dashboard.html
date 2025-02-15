@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <main class="responsive">
+        <article class="padding-double --surface-container round" id="article_content" style="margin-top: 15%;">
+        <div class="padding" >
+            <center>
+          <h3>
+            <center><p>Welcome, {{ user.username }}!</p></center>
+          </h3>
+          {% if num_of_plants<5 %}
+          <a href="/add"><button class="button primary">Add </button></a>
+          {% endif %}
+          <a href="/logout"><button class="button primary">Log Out</button></a>
+          </center>
+          
+          <!-- <b>Click on the fields below </b><br>
+          {% for data in plants_data %}
+            <a href="/plant_dashboard/{{data.id}}" >{{data.plant_name}}</a><br>
+          {% endfor %} -->
+          <table class="border">
+            <thead>
+              <tr>
+                <th>Click on the fields below </th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for data in plants_data %}
+                <tr>  
+                    <td><a href="/{{data.id}}/plant_dashboard_V2" class="link">{{data.plant_name}}</a></td>
+                          
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+          
+          
+          
+          
+        </div> 
+    </article>
+    </main>
+    {% endblock %}

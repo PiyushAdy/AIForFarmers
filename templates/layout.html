@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- BeerCSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/beercss@3.7.10/dist/cdn/beer.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Dynamic Colors -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"
+    ></script>
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+
+    <style>
+      /* Root variables for light/dark themes (unchanged) */
+      :root,
+      body.dark {
+         /* TBD */
+         background-color: white;
+      }
+
+      :root,
+      body.light {
+        --primary:#006a60;
+        --on-primary:#ffffff;
+        --primary-container:#74f8e5;
+        --on-primary-container:#00201c;
+        --secondary:#4a635f;
+        --on-secondary:#ffffff;
+        --secondary-container:#cce8e2;
+        --on-secondary-container:#05201c;
+        --tertiary:#456179;
+        --on-tertiary:#ffffff;
+        --tertiary-container:#cce5ff;
+        --on-tertiary-container:#001e31;
+        --error:#ba1a1a;
+        --on-error:#ffffff;
+        --error-container:#ffdad6;
+        --on-error-container:#410002;
+        --background:#fafdfb;
+        --on-background:#191c1b;
+        --surface:#f7faf8;
+        --on-surface:#191c1b;
+        --surface-variant:#dae5e1;
+        --on-surface-variant:#3f4947;
+        --outline:#6f7977;
+        --outline-variant:#bec9c6;
+        --shadow:#000000;
+        --scrim:#000000;
+        --inverse-surface:#2d3130;
+        --inverse-on-surface:#eff1ef;
+        --inverse-primary:#53dbc9;
+        --surface-dim:#d8dbd9;
+        --surface-bright:#f7faf8;
+        --surface-container-lowest:#ffffff;
+        --surface-container-low:#f2f4f2;
+        --surface-container:#eceeec;
+        --surface-container-high:#e6e9e7;
+        --surface-container-highest:#e0e3e1;
+      }
+
+      
+    </style>
+  </head>
+
+  <body class="light primary">
+    {% block main %}{% endblock %}
+  </body>
+</html>

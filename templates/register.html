@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <main class="responsive">
+        <article class="padding --surface-container round" id="More" style="margin-top: 15%;">
+      <!-- The form that will be submitted -->
+      <form
+        class="padding --surface-container round"
+        id="signupForm"
+        method="POST"
+      >
+        <div class="padding">
+          <h5>
+            <center>Sign Up</center>
+          </h5>
+
+          <div class="field label prefix round border float">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" id="username" name="username" required placeholder=""/>
+              <label>Username</label>
+          </div>
+
+          <div class="field label prefix round border">
+            <i>visibility</i>
+            <input type="password" id="password" name="password" required  placeholder=""/>
+            <label>Password</label>
+          </div>
+
+          <div class="field label prefix round border">
+            <i>visibility</i>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              required
+              placeholder=""
+            />
+            <label>Confirm Password</label>
+          </div>
+
+          <center><button type="submit" class="button primary">Sign Up</button><br><br>
+            Already Have an account ? <a href="/login" class="link">Login here</a></center>
+        </div>
+
+      </form>
+    </article>
+    </main>
+
+    <script>
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (e) {
+          const password = document.getElementById("password").value;
+          const confirm = document.getElementById("confirmPassword").value;
+          if (password !== confirm) {
+            e.preventDefault();
+            alert("Passwords do not match!");
+          }
+        });
+    </script>
+ {% endblock %}
