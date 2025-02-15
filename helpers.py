@@ -4,8 +4,7 @@ from soilgrids import SoilGrids
 import json
 
 def GetWeather(lat,lon):
-    #API_Key=os.environ["OPEN_WEATHER_API_KEY"]
-    API_Key="488ff5307b556bd1e8dd010236b7537e"
+    API_Key=os.environ["OPEN_WEATHER_API_KEY"]
     data=requests.get(f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_Key}")
     return data.json()
 
