@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <main class="responsive">
+        <article class="padding --surface-container round" id="More" style="margin-top: 1%;">
+      <!-- The form that will be submitted -->
+      <form
+        class="padding --surface-container round"
+        id="signupForm"
+        method="POST"
+      >
+        <div class="padding">
+          <h5>
+            <center>Add Farm Data</center>
+          </h5>
+
+          <div class="field label round border float">
+              <!-- <i class="fa-solid fa-user"></i> -->
+              <input type="text" id="plant_name" name="plant_name" required placeholder=""/>
+              <label>Plant Name</label>
+          </div>
+
+          <div class="field label round border float">
+            <!-- <i class="fa-solid fa-user"></i> -->
+            <input type="text" id="plant_type" name="plant_type" required placeholder=""/>
+            <label>Plant Type</label>
+          </div>
+
+          <div class="field label round border float">
+            <!-- <i class="fa-solid fa-user"></i> -->
+            <input type="text" id="soil_type" name="soil_type" required placeholder=""/>
+            <label>Soil Type</label>
+          </div>
+
+          <div class="field label round border float">
+            <!-- <i class="fa-solid fa-user"></i> -->
+            <input type="text" id="farming_practices" name="farming_practices" required placeholder=""/>
+            <label>Farming Practices</label>
+          </div>
+
+          <div class="field label round border float">
+            <!-- <i class="fa-solid fa-user"></i> -->
+            <input type="text" id="resources_available" name="resources_available" required placeholder=""/>
+            <label>Resources Available</label>
+          </div>
+
+          <div class="field label round border float">
+            <!-- <i class="fa-solid fa-user"></i> -->
+            <input type="text" id="lat" name="lat" required placeholder=""/>
+            <label>latitude</label>
+          </div>
+
+          <div class="field label round border float">
+            <!-- <i class="fa-solid fa-user"></i> -->
+            <input type="text" id="lon" name="lon" required placeholder=""/>
+            <label>longitude</label>
+          </div>
+
+
+
+          <center><button type="submit" class="button primary">Add</button><br><br>
+            Go To <a href="/dashboard" class="link">Dashboard</a></center>
+        </div>
+
+      </form>
+    </article>
+    </main>
+    {% endblock %}
