@@ -15,7 +15,6 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'  # Where to redirect unlogged users
 
-
 """Databases"""
 db = SQLAlchemy(app)
 # User Table
@@ -42,6 +41,9 @@ class Plant(db.Model):
     resources_available=db.Column(db.Text)
     lat=db.Column(db.Integer) #latitiude
     lon=db.Column(db.Integer) #longitude
+
+with app.app_context():
+    db.create_all() # Create the database tables if they don't exist
 
 """Functions"""
 @login_manager.user_loader
@@ -178,7 +180,7 @@ def logout():
     logout_user()
     return redirect(url_for('index'))
 
-if __name__ == '__main__':
-    with app.app_context():
-        db.create_all() # Create the database tables if they don't exist
-    app.run(host="0.0.0.0",port="8080")
+# if __name__ == '__main__':
+#     with app.app_context():
+#         db.create_all() # Create the database tables if they don't exist
+#     app.run(host="0.0.0.0",port="8080")
