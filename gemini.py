@@ -2,8 +2,8 @@ import os
 import google.generativeai as genai
 from helpers import * 
 
-#genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-genai.configure(api_key="AIzaSyBq9g6y_TOdQbxpUwM_HvaA8R330_9wMr4")
+genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+
 
 
 # Create the model
