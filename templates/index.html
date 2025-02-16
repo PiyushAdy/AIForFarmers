@@ -4,166 +4,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Farming Platform</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-    <!-- <script defer src="script.js"></script> -->
     <style>
         /* Global Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #a6df56;
-            color: #333;
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #a6df56;
+        color: #333;
+    }
+
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #2b6e44;
+        color: white;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .menu-toggle {
+        display: none;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: white;
+    }
+
+    /* Hero Section */
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+        background: url('hero-bg.jpg') no-repeat center center/cover;
+        color: white;
+    }
+
+    .cta-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #ff6a00;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    /* Features */
+    .features {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .feature-card {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* How It Works */
+    .how-it-works {
+        text-align: left;
+        padding: 50px;
+        background: #eaf7e0;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 15px;
+        background: #2b6e44;
+        color: white;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+        nav {
+            position: relative;
         }
 
-        /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #2b6e44;
-            color: white;
-            padding: 15px 20px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-        }
-
+        /* Floating menu button */
         .menu-toggle {
-            display: none;
-            font-size: 1.5rem;
-            background: none;
-            border: none;
-            color: white;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: url('hero-bg.jpg') no-repeat center center/cover;
-            color: white;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #ff6a00;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-
-        /* Features */
-        .features {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* How It Works */
-        .how-it-works {
-            text-align: left;
-            padding: 50px;
-            background: #eaf7e0;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 15px;
+            display: block;
+            cursor: pointer;
+            font-size: 26px;
+            position: fixed; /* Makes it stay on screen */
+            top: 20px; /* Adjust as needed */
+            right: 20px; /* Adjust as needed */
             background: #2b6e44;
             color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 50%; /* Circular button */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1100; /* Ensures it's always above content */
         }
 
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            nav {
-                position: relative;
-            }
-
-            /* Floating menu button */
-            .menu-toggle {
-                display: block;
-                cursor: pointer;
-                font-size: 26px;
-                position: fixed; /* Makes it stay on screen */
-                top: 20px; /* Adjust as needed */
-                right: 20px; /* Adjust as needed */
-                background: #2b6e44;
-                color: white;
-                padding: 10px 15px;
-                border: none;
-                border-radius: 50%; /* Circular button */
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                z-index: 1100; /* Ensures it's always above content */
-            }
-
-            /* Menu appearance */
-            nav ul {
-                display: none;
-                flex-direction: column;
-                position: fixed;
-                background: #2b6e44;
-                width: 40%; /* 40% width */
-                height: 50vh; /* 50% height */
-                top: 25%; /* Center vertically */
-                right: 5%; /* Adjust position */
-                padding: 20px 0;
-                text-align: center;
-                justify-content: center;
-                align-items: center;
-                border-radius: 10px;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-                z-index: 1000;
-            }
-
-            nav ul.active {
-                display: flex; /* Show menu when toggled */
-            }
-
-            nav ul li {
-                width: 100%;
-                padding: 15px 0;
-                font-size: 18px;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-            }
-
-            nav ul li:last-child {
-                border-bottom: none;
-            }
+        /* Menu appearance */
+        nav ul {
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            background: #2b6e44;
+            width: 40%; /* 40% width */
+            height: 50vh; /* 50% height */
+            top: 25%; /* Center vertically */
+            right: 5%; /* Adjust position */
+            padding: 20px 0;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
         }
+
+        nav ul.active {
+            display: flex; /* Show menu when toggled */
+        }
+
+        nav ul li {
+            width: 100%;
+            padding: 15px 0;
+            font-size: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        nav ul li:last-child {
+            border-bottom: none;
+        }
+    }
 
 
     </style>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- <script defer src="script.js"></script> -->
 </head>
 <body>
-    
+
     <header>
         <div class="logo">SmartFarming</div>
         <nav>
@@ -179,7 +179,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>AI-Powered Smart Farming</h1>
-            <p>Enhance your farming with AI-driven insights, real-time weather updates, and personalized recommendations.</p>
+            <p>A smart digital platform designed to : <br>Enhance your farming with AI-driven advisory,planning, real-time updates, and personalized recommendations.</p>
             <a href="/dashboard" class="cta-btn">Get Started</a>
         </div>
     </section>
@@ -187,18 +187,26 @@
     <section id="features" class="features">
         <h2>Platform Features</h2>
         <div class="feature-grid">
-            <div class="feature-card">🌱 AI-Based Crop & Fertilizer Suggestions</div>
-            <div class="feature-card">☁️ Real-Time Weather Updates</div>
-            <div class="feature-card">🐛 Pest & Disease Alerts</div>
-            <div class="feature-card">📈 Market Price Insights</div>
+            <div class="feature-card">💬 <strong>AI Chat for Farmers</strong> – Get instant responses to queries, reports, and advisory based on real-time conditions.</div>
+    <div class="feature-card">📅 <strong>Automated Farming Schedules</strong> – AI-generated plans & tracking for better yield and issue resolution.</div>
+    <div class="feature-card">⛅ <strong>Market & Weather Updates</strong> – Receive real-time alerts on weather, prices, and government schemes.</div>
+    <div class="feature-card">🧪 <strong>Smart Recommendations</strong> – Personalized AI-driven suggestions on fertilizers, tools, and farming techniques.</div>
+    <div class="feature-card">📊 <strong>Report & Track System</strong> – Log issues, receive AI insights, and monitor progress effectively.</div>
+    <!-- <div class="feature-card">🔗 <strong>Expandable Integrations</strong> – Future-ready for AI tools & government data integration.</div>
+    <div class="feature-card">📱 <strong>Multi-Device Friendly</strong> – Seamlessly optimized for mobile and desktop use.</div> -->
+    <div class="feature-card">❓ <strong>Support & FAQs</strong> – Quick access to help, guidance, and common queries.</div>
         </div>
     </section>
 
     <section id="how-it-works" class="how-it-works">
         <h2>How It Works</h2>
-        <p>1️⃣ Sign up and provide your farming details. <br>
-           2️⃣ Get personalized recommendations & alerts. <br>
-           3️⃣ Boost productivity with AI-driven insights.</p>
+        <p>1️⃣ Sign up and provide your farming details. <br><br>
+            2️⃣ AI tracks inputs, weather, and market trends to suggest actions. <br><br>
+            3️⃣ Interact with AI chat for queries and receive personalized responses. <br><br>
+            4️⃣ Follow AI-generated plans, receive alerts, and update your progress. <br><br>
+            5️⃣ AI refines recommendations based on real-time feedback. <br><br>
+            6️⃣ AI regularly pushes relevant news, market opportunities, and tool recommendations. </p>
+            
     </section>
 
     <footer id="contact">
@@ -206,10 +214,10 @@
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navLinks = document.querySelector("nav ul");
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navLinks = document.querySelector("nav ul");
 
-        menuToggle.addEventListener("click", function () {
+            menuToggle.addEventListener("click", function () {
                 navLinks.classList.toggle("active"); // Show/hide menu
             });
         });
